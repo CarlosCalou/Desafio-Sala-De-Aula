@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <!-- Desafio professor(exercicio1), minha resposta: -->
+  <!-- <script>
+    var operacao = Number(
+      prompt(`
+        Selecione a operação:
+        1. somar
+        2. subtrair
+        3. multplicar
+        4. dividir
+      `)
+    );
+
+    if (operacao > 0 && operacao < 5) {
+      var n1 = Number(prompt("Digite o primeiro valor:"));
+      var n2 = Number(prompt("Digite o segundo valor:"));
+      calcular(operacao, n1, n2);
+    } else {
+      alert("Operação inválida!");
+    }
+
+    function calcular(operacao, n1, n2) {
+      switch (operacao) {
+        case 1:
+          alert(n1 + n2);
+          break;
+        case 2:
+          alert(n1 - n2);
+          break;
+        case 3:
+          alert(n1 * n2);
+          break;
+        case 4:
+          if (n2 === 0) {
+            alert("Divisão por zero não é permitida.");
+            return;
+          }
+          alert(n1 / n2);
+      }
+    }
+  </script> -->
+  <!-- aulinha sobre math.ceil e math.random
+  <script>
+    var valor = Math.ceil(Math.random() * 100);
+    console.log(valor);
+  </script> -->
+  <!-- 
+  Desafio professor(exercicio2), minha resposta: -->
+
+  <script>
+    var numeroAleatorio = Math.ceil(Math.random() * 100);
+    function adivinhar(adv) {
+      const numeroUsuario = Number(prompt("Digite um numero entre 1 e 100"));
+      if (numeroAleatorio > numeroUsuario) {
+        alert("O número secreto é maior.");
+        adivinhar(adv);
+        return;
+      } else if (numeroAleatorio < numeroUsuario) {
+        alert("O número secreto é menor.");
+        adivinhar(adv);
+      } else if (numeroAleatorio == numeroUsuario) {
+        alert("Você acertou!!");
+        console.log("Número secreto:", numeroAleatorio);
+        return;
+      } else alert("Digite um número válido");
+    }
+
+    adivinhar(numeroAleatorio);
+    console.log("Número secreto:", numeroAleatorio);
+  </script>
+</html>
